@@ -10,7 +10,7 @@ Add this package dependency in your Xcode project by following steps.
 Create New Xcode project. File -> New -> Project -> App -> (Name of your project) ... complete remaining steps
 File -> Swift Packages -> Add Package Dependency -> Enter:
 
- [xtravision-package-url](https://bitbucket.org/ajayxtra/saas-swift-package.git)
+ [xtravision-package-url](https://github.com/xtravision-ai/xtravision-swift-package.git)
 
 repository url -> Next -> Select Branch(master) and complete the remaining steps and your package dependency will be added in your xcode project.
 Clean and build your project.
