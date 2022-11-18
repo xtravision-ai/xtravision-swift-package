@@ -19,7 +19,7 @@ Clean and build your project.
 
 Open Xcode peoject.
 Download framework from :
- [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.1/XtraVisionAI.xcframework.zip)
+ [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.0/XtraVisionAI.xcframework.zip)
  
 Now in your xcode project select your TARGET -> General Tab -> Drag and Drop the downloaded folder in Frameworks, Libraries and Embedded Content.
 Now build your project.
@@ -31,7 +31,7 @@ Now follow the steps in your controlller to get the assessment results from came
 import XtraVisionAI
 
 //Access assessment class and add delegate. Also inherit this delegate XtraVisionAIDelegate
-let assessment = XtraVisionAIClass.shared
+let assessment = XtraVisionAIManager.shared
 assessment.delegate = self
 
 ```
@@ -42,8 +42,13 @@ After starting camera session to connect the XTRAVision's backend
 //  Prepare Initial Object
 let assessmentConfig = XtraVisionAssessmentConfig(repsThreshold, grace_time_threshold: grace_time_threshold)
 let connectionData = XtraVisionConnectionData(authToken, assessmentName: assessmentName, assessmentConfig: assessmentConfig)
-val requestData = XtraVisionRequestData(isPreJoin)
-let libData = XtraVisionLibData(false)//Skeleton parameter, todo: work is pending for this
+var requestData = XtraVisionRequestData(isPreJoin)
+
+//  Change skeleton Line's color and width. Change dot's radius and color using below command
+let skeletonConfig = XtraVisionSkeletonConfig(line width, dotRadius: dotradius, lineColor: UIColor.red, dotColor: UIColor.blue)
+
+// Cameraview is one in which you want to show a preview of camera
+let libData = XtraVisionLibData(isSkeletonEnable, cameraView: cameraView, previewLayer: previewLayer, skeletonConfig: skeletonConfig)
 
 // create an object and initiate the Assessment process
 xtraVisionMgr.configureData(connectionData, requestData: requestData, libData: libData)
@@ -57,10 +62,10 @@ xtraVisionMgr.disconnectSocket()
 
 ```
 
-Once you will get sample buffer from camera frames, convert that into UIImage format and send that UIImage to below function, this is continuous process
+Once you will get sample buffer from delegate method, just pass that into below function
 
 ```
-xtraVisionMgr.detectPose(image: image)
+xtraVisionMgr.detectPose(sampleBuffer)
 
 ```
 
