@@ -19,7 +19,7 @@ Clean and build your project.
 
 Open Xcode peoject.
 Download framework from :
- [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.0/XtraVisionAI.xcframework.zip)
+ [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.1/XtraVisionAI.xcframework.zip)
  
 Now in your xcode project select your TARGET -> General Tab -> Drag and Drop the downloaded folder in Frameworks, Libraries and Embedded Content.
 Now build your project.
