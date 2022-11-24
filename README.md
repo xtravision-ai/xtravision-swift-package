@@ -77,3 +77,6 @@ func onMessageReceived(_ message: String) {
 }
 
 ```
+# NOTE
+
+While setting capture device, don't forget to set FPS. Please check demo app for setting FPS
