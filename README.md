@@ -75,8 +75,3 @@ So once you start doing pose, you will get result in below delegate method. You 
 func onMessageReceived(_ message: String) {
     print("message: \(message)")
 }
-
-```
-# NOTE
-
-While setting capture device, don't forget to set FPS. Please check demo app for setting FPS
