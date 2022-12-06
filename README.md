@@ -36,7 +36,7 @@ assessment.delegate = self
 
 ```
 
-After starting camera session to connect the XTRAVision's backend
+Camera session will be started after connecting to the XTRAVision's backend
 
 ```
 //  Prepare Initial Object
@@ -48,7 +48,7 @@ var requestData = XtraVisionRequestData(isPreJoin)
 let skeletonConfig = XtraVisionSkeletonConfig(line width, dotRadius: dotradius, lineColor: UIColor.red, dotColor: UIColor.blue)
 
 // Cameraview is one in which you want to show a preview of camera
-let libData = XtraVisionLibData(isSkeletonEnable, cameraView: cameraView, previewLayer: previewLayer, skeletonConfig: skeletonConfig)
+let libData = XtraVisionLibData(isSkeletonEnable, cameraView: cameraView, skeletonConfig: skeletonConfig)
 
 // create an object and initiate the Assessment process
 xtraVisionMgr.configureData(connectionData, requestData: requestData, libData: libData)
@@ -58,14 +58,7 @@ xtraVisionMgr.configureData(connectionData, requestData: requestData, libData: l
 To disconnect from socket after stop camera session, Use
 
 ```
-xtraVisionMgr.disconnectSocket()
-
-```
-
-Once you will get sample buffer from delegate method, just pass that into below function
-
-```
-xtraVisionMgr.detectPose(sampleBuffer)
+xtraVisionMgr.disconnectSession()
 
 ```
 
