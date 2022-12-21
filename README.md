@@ -41,7 +41,7 @@ Camera session will be started after connecting to the XTRAVision's backend
 ```
 //  Prepare Initial Object
 let assessmentConfig = XtraVisionAssessmentConfig(repsThreshold, grace_time_threshold: grace_time_threshold)
-let connectionData = XtraVisionConnectionData(authToken, assessmentName: assessmentName, assessmentConfig: assessmentConfig)
+let connectionData = XtraVisionConnectionData(authToken, assessmentName: assessmentName, assessmentConfig: assessmentConfig, session_id : session_id)
 var requestData = XtraVisionRequestData(isPreJoin)
 
 //  Change skeleton Line's color and width. Change dot's radius and color using below command

@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: "XtraVisionAI",
             url: "https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.3/XtraVisionAI.xcframework.zip",
-            checksum: "feea957cba8a51107f66d8b426467c7ab51e6a86790bffefe945648dd5d42212"
+            checksum: "b14791f4e3904612932240c35ea0b90b659f9f18b128b3323755326f157e1a1f"
         )
     ]
 )
