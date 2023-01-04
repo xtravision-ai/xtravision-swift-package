@@ -12,14 +12,14 @@ File -> Swift Packages -> Add Package Dependency -> Enter:
 
  [xtravision-package-url](https://github.com/xtravision-ai/xtravision-swift-package.git)
 
-repository url -> Next -> Select Branch(master) and complete the remaining steps and your package dependency will be added in your xcode project.
+repository url -> Next -> Select Branch(main) and complete the remaining steps and your package dependency will be added in your xcode project.
 Clean and build your project.
 
 # Manual Installation
 
 Open Xcode peoject.
 Download framework from :
- [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.0/XtraVisionAI.xcframework.zip)
+ [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.3/XtraVisionAI.xcframework.zip)
  
 Now in your xcode project select your TARGET -> General Tab -> Drag and Drop the downloaded folder in Frameworks, Libraries and Embedded Content.
 Now build your project.
