@@ -61,10 +61,23 @@ To disconnect from socket after stop camera session, Use
 xtraVisionMgr.disconnectSession()
 
 ```
-
-So once you start doing pose, you will get result in below delegate method. You can use this result in your app.
+These are the delegate methods of Xtravision SDK.
 
 ```
 func onMessageReceived(_ message: String) {
     print("message: \(message)")
+    //handle the response after start doing the pose
 }
+
+func onConnectSuccess() {
+    print("Connection done successfully")
+}
+    
+func onConnectFailed(_ string: String) {
+    print("Connection failed: ", string)
+}
+    
+func onConnectClose() {
+    print("Connection closed")
+}
+```
