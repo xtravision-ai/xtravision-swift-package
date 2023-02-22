@@ -81,3 +81,31 @@ func onConnectClose() {
     print("Connection closed")
 }
 ```
+
+# XTRA UI Components
+
+# Repetitions Counter
+
+This is the UI Component that can be used to count reps. 
+
+ defaultRepsColor : Set Color for default reps view
+ filledRepsColor : Set Color for Reps increment 
+
+```
+private var repsCounterView : RepetitionCounter!
+
+func setRepsCounter() {
+    repsCounterView = RepetitionCounter(frame : CGRect(x: 0, y: 0, width: self.view.frame.width - 40, height: 200))
+    repsCounterView.defaultRepsColor = UIColor.lightGray
+    repsCounterView.filledRepsColor = UIColor.red
+    self.vwrepsCounter.addSubview(repsCounterView)
+}
+
+```
+
+Once you will start getting response from onMessageReceived() delegate method, you can call below to set reps in Component
+
+```
+repsCounterView.setReps(total)
+
+```
