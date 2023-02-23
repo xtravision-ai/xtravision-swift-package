@@ -95,7 +95,7 @@ This is the UI Component that can be used to count reps.
 private var repsCounterView : RepetitionCounter!
 
 func setRepsCounter() {
-    repsCounterView = RepetitionCounter(frame : CGRect(x: 0, y: 0, width: self.view.frame.width - 40, height: 200))
+    repsCounterView = RepetitionCounter(frame : FRAME_VALUE)
     repsCounterView.defaultRepsColor = UIColor.lightGray
     repsCounterView.filledRepsColor = UIColor.red
     self.vwrepsCounter.addSubview(repsCounterView)
@@ -107,5 +107,45 @@ Once you will start getting response from onMessageReceived() delegate method, y
 
 ```
 repsCounterView.setReps(total)
+
+```
+# Time Based Counter
+
+This is the UI Component that is used for time based exercises 
+
+```
+private var timerView : TimeUnderLoadView!
+
+func setTimeUnderLoadView() {
+        timerView = TimeUnderLoadView(frame : FRAME_VALUE)
+        timerView.totleSeconds = 10 //Set total seconds 
+        timerView.progressTextColor = UIColor.black //set color for text which shows progress
+        timerView.gradientColors = [color1, color2] //Change gradient color if required, pass 2 colors
+        self.vwrepsCounter.addSubview(timerView)
+}
+```
+Once you will start getting response from onMessageReceived() delegate method, you can call below to set remaining time 
+
+```
+timerView.setTimeUnderLoad(10 - seconds)
+
+```
+# Intensity Meter
+
+This is the UI Component that is used for showing intensity 
+
+```
+private var intensityMeterView : IntensityMeterView!
+
+func setIntensityMeterView() {
+    intensityMeterView = IntensityMeterView(frame : FRAME_VALUE)
+    self.vwrepsCounter.addSubview(intensityMeterView)
+}
+
+```
+Once you will start getting response from onMessageReceived() delegate method, you can call below to set power values, power value ranges from 0 to 100.
+
+```
+intensityMeterView.setIntensity(value)
 
 ```
