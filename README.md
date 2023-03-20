@@ -149,7 +149,7 @@ Once you will start getting response from onMessageReceived() delegate method, y
 intensityMeterView.setIntensity(value)
 
 ```
-To customise the color and font of Tone, cardio, power label, use below function
+To customise the color and font of Tone, cardio, power label, use below function.
 
 ```
 intensityMeterView.customiseTitles(_ font : UIFont, textColor : UIColor)
