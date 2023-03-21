@@ -146,7 +146,7 @@ func setIntensityMeterView() {
 Once you will start getting response from onMessageReceived() delegate method, you can call below to set power values, power value ranges from 0 to 100.
 
 ```
-intensityMeterView.setIntensity(value)
+intensityMeterView.setIntensity(Float(value))
 
 ```
 To customise the color and font of Tone, cardio, power label, use below function.
