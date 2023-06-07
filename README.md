@@ -19,7 +19,7 @@ Clean and build your project.
 
 Open Xcode peoject.
 Download framework from :
- [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.3/XtraVisionAI.xcframework.zip)
+ [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.6/XtraVisionAI.xcframework.zip)
  
 Now in your xcode project select your TARGET -> General Tab -> Drag and Drop the downloaded folder in Frameworks, Libraries and Embedded Content.
 Now build your project.
@@ -40,7 +40,7 @@ Camera session will be started after connecting to the XTRAVision's backend
 
 ```
 //  Prepare Initial Object
-let assessmentConfig = XtraVisionAssessmentConfig(repsThreshold, grace_time_threshold: grace_time_threshold)
+let assessmentConfig = XtraVisionAssessmentConfig(repsThreshold, grace_time_threshold: grace_time_threshold, sets_threshold : sets_threshold)
 let connectionData = XtraVisionConnectionData(authToken, assessmentName: assessmentName, assessmentConfig: assessmentConfig, session_id : session_id)
 var requestData = XtraVisionRequestData(isPreJoin)
 
@@ -55,12 +55,21 @@ xtraVisionMgr.configureData(connectionData, requestData: requestData, libData: l
 
 ```
 
-To disconnect from socket after stop camera session, Use
+To disconnect from socket after stop camera session. 
+If isPreJoin = true then,
 
 ```
-xtraVisionMgr.disconnectSession()
+xtraVisionMgr.disconnectSession(false)
 
 ```
+
+If isPreJoin = false then,
+
+```
+xtraVisionMgr.disconnectSession(true)
+
+```
+
 These are the delegate methods of Xtravision SDK.
 
 ```
