@@ -2,9 +2,7 @@
 
 # Using Swift Package Manager
 
-This Swift Package manager is created for checking assessments. Currently we are supporting below assessments.
-
-GLUTE_BRIDGE, QUADS_STRETCH, OVERHEAD_STRETCH, SINGLE_LEG_KNEE_HUGS, DOUBLE_LEG_KNEE_HUGS, THORACIC_ROTATION, PECTORAL_STRETCH, BOW_AND_ARROW, ROTATION_STRETCH, HIP_FLEXOR_QUAD_STRETCH, BANDED_ALTERNATING_DIAGNOLS, SHOULDER_SCAPTION, HALF_SQUAT, KNEE_ROCKING, NECK_FLEXORS, BANDED_BOW_AND_ARROW, BANDED_EXTERNAL_ROTATION, BANDED_T, BANDED_W, BANDED_PASS_THROUGH
+This Swift Package manager is created for checking assessments.
 
 Add this package dependency in your Xcode project by following steps.
 Create New Xcode project. File -> New -> Project -> App -> (Name of your project) ... complete remaining steps
@@ -19,7 +17,7 @@ Clean and build your project.
 
 Open Xcode peoject.
 Download framework from :
- [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.6/XtraVisionAI.xcframework.zip)
+ [xtravision-framework-url](https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.7/XtraVisionAI.xcframework.zip)
  
 Now in your xcode project select your TARGET -> General Tab -> Drag and Drop the downloaded folder in Frameworks, Libraries and Embedded Content.
 Now build your project.
