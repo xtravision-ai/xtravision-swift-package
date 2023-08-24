@@ -20,8 +20,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "XtraVisionAI",
-            url: "https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.7/XtraVisionAI.xcframework.zip",
-            checksum: "2a2836f7f07b67e2d3d19043fdd63394f833e829f47b1cb2bf920e723460f977"
+            url: "https://github.com/xtravision-ai/xtravision-swift-framework/releases/download/v1.0.8/XtraVisionAI.xcframework.zip",
+            checksum: "3cb0ee46fde69f5afc1e8b587945c3f558108619a1b16794cb0279905153eedf"
         )
     ]
 )
